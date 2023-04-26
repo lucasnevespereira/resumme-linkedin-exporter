@@ -1,0 +1,14 @@
+{
+  "name": "Resumme LinkedIn Exporter",
+  "version": "1.0",
+  "description": "Export LinkedIn Data to JSON format",
+  "manifest_version": 2,
+  "browser_action": {
+    "default_popup": "popup.html"
+  },
+  "permissions": [
+    "declarativeContent",
+    "activeTab",
+    "storage"
+  ]
+}
