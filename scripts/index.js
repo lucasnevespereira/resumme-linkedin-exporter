@@ -1,8 +1,24 @@
 console.log("Hello from DOM Content");
 
+
+const SESSION_COOKIE_NAME = "JSESSIONID"
+
+function getCookie(name) {
+    const cookies = document.cookie.split("; ");
+    for (const cookie of cookies) {
+        const [cookieName, cookieValue] = cookie.split("=");
+        if (cookieName === name) {
+            return decodeURIComponent(cookieValue);
+        }
+    }
+    return null;
+}
+
 chrome.runtime.onMessage.addListener(async (request, sender, response) => {
-    if (request.action == "EXPORT") {
-        console.log("ready to export")
-        alert("ready")
+    if (request.action === "EXPORT") {
+        const cookieValue = getCookie(SESSION_COOKIE_NAME);
+        console.log(cookieValue);
+        alert(cookieValue);
     }
 })
+
