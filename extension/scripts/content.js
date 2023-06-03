@@ -17,8 +17,7 @@ function getCookie(name) {
 chrome.runtime.onMessage.addListener(async (request, sender, response) => {
     if (request.action === "EXPORT") {
         const cookieValue = getCookie(SESSION_COOKIE_NAME);
-        console.log(cookieValue);
-        alert(cookieValue);
+        console.log("Session ID", cookieValue);
     }
 })
 
