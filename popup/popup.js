@@ -1,4 +1,4 @@
-const btnExportData = document.querySelector("#export-button");
+const btnExportData = document.querySelector("#export-btn");
 
 const tab = await getCurrentTab();
 

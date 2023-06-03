@@ -18,13 +18,8 @@
   },
   "content_scripts": [
     {
-      "js": [
-        "./scripts/index.js"
-      ],
-      "matches": [
-        "*://linkedin.com/*"
-      ],
-      "run_at": "document_end"
+      "matches": ["*://www.linkedin.com/*"],
+      "js": ["scripts/index.js"]
     }
   ],
   "background": {
